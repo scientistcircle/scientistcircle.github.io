@@ -43,6 +43,10 @@ header .container {
     margin-right: 10px;
 }
 
+h1 {
+    font-size: 27px;
+}
+
 header h1 {
     font-size: 2rem;
     margin-right: 43rem;
