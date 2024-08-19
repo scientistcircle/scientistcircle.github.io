@@ -1,10 +1,12 @@
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+html, body {
+    height: 100%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background: #ffffff;
     color: #fff;
@@ -12,16 +14,17 @@ body {
 
 /* Header Styling */
 header {
-    background: linear-gradient(135deg,     #035bb980, #004cffad);
+    background: linear-gradient(135deg, #035bb980, #004cffad);
     color: #fff;
-    padding: 20px 20px;
-    position: static;
+    padding: 20px;
+    position: sticky; /* Sticky untuk tetap di atas */
     top: 0;
     width: 100%;
-    backdrop-filter: blur(10px); /* Efek blur */
-    border-radius: 0px; /* Border sudut membulat */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Bayangan untuk efek 3D */
-    z-index: 1000; /* Agar header tetap di atas */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Untuk Chrome/Safari */
+    border-radius: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
 }
 
 header .container {
@@ -31,8 +34,9 @@ header .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    flex-wrap: wrap;
 }
-/* Logo dan Title di Header */
+
 .logo-header {
     display: flex;
     align-items: center;
@@ -49,18 +53,18 @@ h1 {
 
 header h1 {
     font-size: 2rem;
-    margin-right: 43rem;
     font-weight: 500;
+    margin: 0;
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    gap: 1.5rem;
 }
 
 nav ul li {
-    margin-left: 1.5rem;
-    position: relative;
     font-size: 10pt;
 }
 
@@ -68,9 +72,7 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    position: relative;
     padding: 0.5rem 0;
-    display: inline-block;
     transition: color 0.3s, transform 0.3s;
 }
 
@@ -84,7 +86,6 @@ nav ul li a::before {
     background: #fff;
     transform: scaleX(0);
     transition: transform 0.3s;
-    transform-origin: bottom right;
 }
 
 nav ul li a:hover {
@@ -94,7 +95,6 @@ nav ul li a:hover {
 
 nav ul li a:hover::before {
     transform: scaleX(1);
-    transform-origin: bottom left;
 }
 
 button.theme-toggle {
@@ -120,22 +120,21 @@ section.playlist h2 {
 }
 
 .song-list {
-    display:contents;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
-    gap: 4.90rem;
+    gap: 4.9rem;
 }
 
-
+/* Footer Styling */
 footer {
     background-color: #333;
     color: white;
     padding: 3rem;
+    text-align: center;
     margin-top: 10rem;
 }
 
 footer p {
-    margin: 0;
-    text-align: center;
     font-size: 0.9rem;
 }
 
@@ -153,7 +152,7 @@ footer p {
         font-size: 2rem;
     }
 
-    .song h3 {
-        font-size: 1.3rem;
+    .song-list {
+        grid-template-columns: 1fr;
     }
 }
