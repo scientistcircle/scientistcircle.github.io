@@ -12,67 +12,54 @@ html, body {
     color: #fff;
 }
 
-/* Header Styling */
 header {
-    background: linear-gradient(135deg, #035bb980, #004cffad);
+    background: linear-gradient(135deg, #007bff, #00d2ff);
     color: #fff;
-    padding: 20px;
-    position: sticky; /* Sticky untuk tetap di atas */
-    top: 0;
-    width: 100%;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Untuk Chrome/Safari */
-    border-radius: 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+header.dark-mode {
+    background: linear-gradient(135deg, #333, #555);
 }
 
 header .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
-    flex-wrap: wrap;
-}
-
-.logo-header {
-    display: flex;
-    align-items: center;
+    padding: 0 1rem;
 }
 
 .logo {
-    width: 60px;
-    margin-right: 10px;
-}
-
-h1 {
-    font-size: 27px;
+    
+    height: 60px; /* Sesuaikan dengan ukuran logo Anda */
+    margin-right: 1rem;
 }
 
 header h1 {
-    font-size: 2rem;
-    font-weight: 500;
     margin: 0;
-    text-align: center;
+    flex-grow: 1;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
 }
 
 nav ul li {
-    font-size: 10pt;
+    margin-left: 1.5rem;
+    position: relative;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    position: relative;
     padding: 0.5rem 0;
+    display: inline-block;
     transition: color 0.3s, transform 0.3s;
 }
 
@@ -86,6 +73,7 @@ nav ul li a::before {
     background: #fff;
     transform: scaleX(0);
     transition: transform 0.3s;
+    transform-origin: bottom right;
 }
 
 nav ul li a:hover {
@@ -95,14 +83,7 @@ nav ul li a:hover {
 
 nav ul li a:hover::before {
     transform: scaleX(1);
-}
-
-button.theme-toggle {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
+    transform-origin: bottom left;
 }
 
 section.playlist {
