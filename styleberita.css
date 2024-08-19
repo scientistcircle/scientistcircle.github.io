@@ -44,7 +44,7 @@ nav ul li a {
 }
 
 .logo {
-    width: 60px;
+     width: 80px;
     height: auto;
     margin-right: 10px;
     animation: fade-in 2s infinite;
@@ -82,11 +82,11 @@ main {
 }
 
 .news-container {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
 }
 
 .news-article {
@@ -103,13 +103,14 @@ main {
 }
 
 .news-content {
-    padding: 20px;
+    padding: 30px;
+    font-size: 13pt;
     flex: 1;
 }
 
 .news-content h2 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 16pt;
     color: #333;
 }
 
