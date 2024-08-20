@@ -12,6 +12,7 @@ html, body {
     color: #fff;
 }
 
+/* Header Styling */
 header {
     background: linear-gradient(135deg, #007bff, #00d2ff);
     color: #fff;
@@ -101,9 +102,9 @@ section.playlist h2 {
 }
 
 .song-list {
-    display: grid;
+    display:list-item;
     grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
-    gap: 4.9rem;
+    gap: 3rem;
 }
 
 /* Footer Styling */
