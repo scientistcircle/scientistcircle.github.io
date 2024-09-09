@@ -59,6 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
         progressFill.style.width = '100%'; // Ensure progress bar reaches 100%
         setTimeout(() => {
             splashScreen.classList.add("hidden");
-        }, 3000); // Add a small delay before hiding splash screen
+        }, 000); // Add a small delay before hiding splash screen
     });
 });
