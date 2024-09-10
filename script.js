@@ -44,14 +44,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Update progress function
     function updateProgress() {
         if (loaded < total) {
-            loaded += Math.random() * 10; // Increment loading progress randomly
+            loaded += Math.random() * 5; // Increment loading progress randomly
             if (loaded > total) loaded = total; // Prevent over 100%
             progressFill.style.width = `${loaded}%`;
         }
     }
 
     // Simulate loading based on internet speed
-    const interval = setInterval(updateProgress, 700); // Update progress every 100ms
+    const interval = setInterval(updateProgress, 2000); // Update progress every 100ms
 
     // Event listener to hide splash screen when the page is fully loaded
     window.addEventListener('load', () => {
