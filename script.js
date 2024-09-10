@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Simulate loading based on internet speed
-    const interval = setInterval(updateProgress, 100); // Update progress every 100ms
+    const interval = setInterval(updateProgress, 700); // Update progress every 100ms
 
     // Event listener to hide splash screen when the page is fully loaded
     window.addEventListener('load', () => {
